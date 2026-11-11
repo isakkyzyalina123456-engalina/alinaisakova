@@ -1,0 +1,103 @@
+
+<!DOCTYPE html>
+<html lang="ky">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Бекжан & Алия</title>
+<style>
+body {
+  margin: 0;
+  font-family: Georgia, serif;
+  background: #fff8ef;
+  color: #80613c;
+  text-align: center;
+}
+.container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 25px;
+  box-sizing: border-box;
+}
+.envelope {
+  font-size: 110px;
+  cursor: pointer;
+  animation: pulse 2s infinite;
+}
+@keyframes pulse {
+  50% { transform: scale(1.08); }
+}
+#invitation {
+  display: none;
+  max-width: 420px;
+  border: 2px solid #d6b77a;
+  padding: 30px 20px;
+  background: #fffdf8;
+  border-radius: 12px;
+}
+h1 {
+  font-size: 35px;
+  color: #b18a4e;
+}
+h2 {
+  font-weight: normal;
+}
+.line {
+  color: #c5a36a;
+  font-size: 25px;
+}
+button {
+  background: #b18a4e;
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 25px;
+  cursor: pointer;
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+  <div id="cover">
+    <div class="envelope" onclick="openInvite()">💌</div>
+    <p>Сизге атайын чакыруу келди</p>
+    <button onclick="openInvite()">Конвертти ачуу</button>
+  </div>
+
+  <div id="invitation">
+    <div class="line">❀ ✧ ❀</div>
+    <p>СҮЙҮҮ МЕНЕН ЧАКЫРАБЫЗ</p>
+    <h1>Бекжан & Алия</h1>
+    <div class="line">♡</div>
+    <h2>Үйлөнүү тоюбузга</h2>
+    <p>18-ноябрь</p>
+    <h2>Саат 16:00</h2>
+    <div class="line">✧</div>
+    <p>Өткөрүлүүчү дарек:</p>
+    <h2>«Асман» рестораны</h2>
+    <p>Бишкек шаары</p>
+    <div class="line">❀</div>
+    <p>Сиздерди терең урматтоо менен</p>
+    <h2>Той ээлери Бакай & Айдай</h2>
+    <p>Келип сыйлуу коногубуз болуп кетиңиздер!</p>
+  </div>
+</div>
+
+<audio id="music" loop>
+  <source src="music.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+function openInvite() {
+  document.getElementById("cover").style.display = "none";
+  document.getElementById("invitation").style.display = "block";
+  document.getElementById("music").play();
+}
+</script>
+
+</body>
+</html>
